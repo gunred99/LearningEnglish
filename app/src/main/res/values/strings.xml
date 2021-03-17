@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EnglishLearnApp</string>
+    <string name="label_signin">Sign In</string>
+    <string name="label_login">Login</string>
+    <string name="enter_name">Enter name</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_confirm_password">Enter confirm password</string>
+</resources>
