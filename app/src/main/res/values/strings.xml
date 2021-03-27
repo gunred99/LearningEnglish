@@ -6,4 +6,25 @@
     <string name="enter_email">Enter email</string>
     <string name="enter_password">Enter password</string>
     <string name="enter_confirm_password">Enter confirm password</string>
+    <string name="label_head_main">Hello,</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="learn">Learn</string>
+    <string name="practice">Practice</string>
+    <string name="label_search">Search keywords...</string>
+    <string name="btn_search">Search</string>
+    <string name="mLaunch">EngLearnApp</string>
+    <string name="mLaunch1">Are you ready to learn japanese easily in the funniest way?</string>
+    <string name="mBtnLogin">Login</string>
+    <string name="mBtnSignUp">Sign up</string>
+    <string name="mLabelName">Full name</string>
+    <string name="mLabelEmail">E-mail Address</string>
+    <string name="mLabelPassword">Create password</string>
+    <string name="mLabelConfirmPassword">Confirm your password</string>
+    <string name="mLabelIndenPassword">Confirm your password</string>
+    <string name="mLabelEnterPassword">Enter your password</string>
+    <string name="mAddAcount">Already have an account?</string>
+    <string name="bot_chat">Bot Chat</string>
+    <string name="btn_signout">Sign out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

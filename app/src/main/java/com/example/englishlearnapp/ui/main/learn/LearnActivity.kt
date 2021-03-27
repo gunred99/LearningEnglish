@@ -1,11 +1,12 @@
-package com.example.englishlearnapp
+package com.example.englishlearnapp.ui.main.learn
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.englishlearnapp.R
 
-class LaunchActivity:AppCompatActivity() {
+class LearnActivity:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.launch_activity)
+        setContentView(R.layout.learn_activity)
     }
 }

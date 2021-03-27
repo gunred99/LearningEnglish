@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btnHome"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        />
+    <item
+        android:id="@+id/btnLearn"
+        android:title="Learn"
+        android:icon="@drawable/ic_learn"
+        />
+    <item
+        android:id="@+id/btnPractice"
+        android:title="Practice"
+        android:icon="@drawable/ic_practice"
+        />
+    <item
+        android:id="@+id/btnBotChat"
+        android:title="Bot Chat"
+        android:icon="@drawable/ic_bot_chat"
+        />
+    <item
+        android:id="@+id/btnSettings"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings"
+        />
+</menu>
