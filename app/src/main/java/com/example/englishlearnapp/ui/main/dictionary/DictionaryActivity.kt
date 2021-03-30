@@ -102,10 +102,3 @@ class DictionaryActivity : AppCompatActivity() {
     }
 
 }
-
-//database.child("Vocabulary")
-//if (TextUtils.isEmpty(mTxtSearch.text.toString())) {
-//    Toast.makeText(applicationContext, "No empty keyword allowed", Toast.LENGTH_SHORT).show()
-//} else {
-//    Translate(txtSearch)
-//}
