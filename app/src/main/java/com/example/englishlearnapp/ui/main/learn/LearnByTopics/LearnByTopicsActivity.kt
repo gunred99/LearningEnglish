@@ -1,12 +1,14 @@
-package com.example.englishlearnapp.ui.main.botchat
+package com.example.englishlearnapp.ui.main.learn.LearnByTopics
 
 import android.os.Bundle
+import android.renderscript.ScriptGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.englishlearnapp.R
+import com.example.englishlearnapp.ui.main.learn.LearnActivity
 
-class BotChatActivity:AppCompatActivity() {
+class LearnByTopicsActivity: AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.bot_chat_activity)
     }
 }

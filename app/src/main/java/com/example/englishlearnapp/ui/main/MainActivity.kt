@@ -6,18 +6,12 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.example.englishlearnapp.R
-import com.example.englishlearnapp.ui.main.botchat.BotChatActivity
+import com.example.englishlearnapp.ui.main.botchat.ui.BotChatActivity
 import com.example.englishlearnapp.ui.main.dictionary.DictionaryActivity
-import com.example.englishlearnapp.ui.main.fragment.FeedFragment
-import com.example.englishlearnapp.ui.main.fragment.MessagesFragment
-import com.example.englishlearnapp.ui.main.fragment.MusicFragment
-import com.example.englishlearnapp.ui.main.fragment.NewsFragment
 import com.example.englishlearnapp.ui.main.learn.LearnActivity
 import com.example.englishlearnapp.ui.main.practice.PracticeActivity
 import com.example.englishlearnapp.ui.main.profile.ProfileActivity
-import com.shrikanthravi.customnavigationdrawer2.data.MenuItem
 import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer
 
 
