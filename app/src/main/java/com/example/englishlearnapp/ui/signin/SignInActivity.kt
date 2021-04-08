@@ -103,7 +103,8 @@ class SignInActivity : AppCompatActivity() {
                                 mPassword.setText("")
                                 mConfirmPassword.setText("")
                                 Log.d("SignInActivity", "Completed")
-                                val intent = Intent(this@SignInActivity, LaunchActivity::class.java)
+                                Toast.makeText(this, "Sign In Completed..", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(this@SignInActivity, LoginActivity::class.java)
                                 startActivity(intent)
                             }
                         }

@@ -11,10 +11,11 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.englishlearnapp.R
+import com.example.englishlearnapp.common.OnLearnRecyclerClick
 import com.example.englishlearnapp.model.LearnTitle
 import com.example.englishlearnapp.ui.main.learn.LearnByTopics.LearnByTopicsActivity
 
-class LearnAdapter(private val learnTitle: List<LearnTitle>) :
+class LearnAdapter(private val learnTitle: List<LearnTitle>, val onLearnRecyclerClick: OnLearnRecyclerClick) :
     RecyclerView.Adapter<LearnAdapter.ViewHolder>() {
 
     class ViewHolder(learnTitleView: View) : RecyclerView.ViewHolder(learnTitleView) {
@@ -32,11 +33,11 @@ class LearnAdapter(private val learnTitle: List<LearnTitle>) :
         }
     }
 
-    interface onLearnClickListner{
-        fun onLearnClick(item: LearnTitle, position: Int){
-
-        }
-    }
+//    interface onLearnClickListner{
+//        fun onLearnClick(item: LearnTitle, position: Int){
+//
+//        }
+//    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.learn_recyclerview, parent, false)
         return ViewHolder(v)
@@ -45,6 +46,9 @@ class LearnAdapter(private val learnTitle: List<LearnTitle>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binds(learnTitle[position])
 
+        holder.itemView.setOnClickListener{
+            onLearnRecyclerClick.onClick(position)
+        }
     }
 
     override fun getItemCount() = learnTitle.size

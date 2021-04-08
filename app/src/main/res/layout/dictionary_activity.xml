@@ -28,6 +28,12 @@
         <TextView
             android:textColor="@color/white"
             android:textSize="30sp"
+            android:id="@+id/txtSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="30sp"
             android:id="@+id/txtResults"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

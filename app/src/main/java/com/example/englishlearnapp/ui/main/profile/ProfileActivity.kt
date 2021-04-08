@@ -13,19 +13,18 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class ProfileActivity:AppCompatActivity() {
-    private lateinit var signOut: Button
+    private lateinit var mBtnReturn: Button
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_activity)
 
-        auth = Firebase.auth
+        mBtnReturn = findViewById(R.id.btn_Return)
 
-        signOut = findViewById(R.id.mBtnSignOut)
-        signOut.setOnClickListener {
-            auth!!.signOut()
-            val intent = Intent(this, LaunchActivity::class.java)
-            startActivity(intent)
+        mBtnReturn.setOnClickListener {
+            val i = Intent(this, MainActivity::class.java)
+            startActivity(i)
+            finish()
         }
 
     }

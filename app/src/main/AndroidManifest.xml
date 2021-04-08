@@ -26,12 +26,22 @@
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.signin.SignInActivity" />
         <activity android:name=".ui.main.dictionary.DictionaryActivity" />
-        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.main.MainActivity" android:theme="@style/Theme.EnglishLearnApp.NoActionBar"/>
         <activity android:name=".ui.main.profile.ProfileActivity" />
         <activity android:name=".ui.main.learn.LearnActivity" />
         <activity android:name=".ui.main.practice.PracticeActivity" />
+        <activity android:name=".ui.main.practices.activity.PracticesActivity"/>
         <activity android:name=".ui.main.botchat.ui.BotChatActivity" />
         <activity android:name=".ui.main.learn.LearnByTopics.LearnByTopicsActivity"/>
+
+        <activity android:name=".ui.main.message.MessageActivity"/>
+        <activity android:name=".ui.main.settings.SettingsActivity"/>
+        <activity android:name=".ui.main.send.SendActivity"/>
+        <activity android:name=".ui.main.share.ShareActivity"/>
+        <activity android:name=".ui.main.developer.DeveloperActivity"/>
+
+        <activity android:name=".ui.main.practice.Category.CategoryActivity"/>
+        <activity android:name=".ui.main.practice.Category.Questions.QuestionsActivity"/>
     </application>
 
 </manifest>

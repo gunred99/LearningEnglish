@@ -1,15 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/background_color"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/onBoarding"
     xmlns:desicgn="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        desicgn:menu="@menu/menu_nav"
-        android:background="@color/dawn"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:background="@drawable/bg"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        android:paddingHorizontal="23.1dp"
+        android:paddingVertical="20.3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/top"
+            desicgn:layout_constraintStart_toStartOf="parent"
+            desicgn:layout_constraintEnd_toStartOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu"
+                desicgn:layout_constraintBottom_toBottomOf="parent"
+                desicgn:layout_constraintStart_toStartOf="parent"
+                desicgn:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/symbol_6__1"
+                desicgn:layout_constraintBottom_toBottomOf="@id/top"
+                desicgn:layout_constraintEnd_toEndOf="@id/top"
+                desicgn:layout_constraintTop_toTopOf="@id/top"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/john"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/opensansextrabold"
+            android:text="John Doe"
+            android:textColor="#ffffff"
+            android:textSize="34dp"
+            desicgn:layout_constraintEnd_toEndOf="parent"
+            desicgn:layout_constraintStart_toStartOf="parent"
+            desicgn:layout_constraintTop_toBottomOf="@id/top"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/stat_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64.8dp"
+            android:background="@drawable/border"
+            android:paddingHorizontal="49dp"
+            android:paddingVertical="40dp"
+            desicgn:layout_constraintTop_toBottomOf="@id/john"
+            >
+
+            <GridView
+                android:id="@+id/simpleGridView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fastScrollEnabled="false"
+                android:numColumns="2"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbars="none"
+                desicgn:layout_constraintBottom_toBottomOf="parent"
+                desicgn:layout_constraintEnd_toEndOf="parent"
+                desicgn:layout_constraintStart_toStartOf="parent"
+                desicgn:layout_constraintTop_toTopOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:src="@drawable/group_358"
+            desicgn:layout_constraintBottom_toBottomOf="parent"
+            desicgn:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

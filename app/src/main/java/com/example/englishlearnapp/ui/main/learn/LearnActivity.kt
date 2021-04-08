@@ -1,5 +1,6 @@
 package com.example.englishlearnapp.ui.main.learn
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -12,7 +13,9 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.englishlearnapp.R
+import com.example.englishlearnapp.common.OnLearnRecyclerClick
 import com.example.englishlearnapp.model.LearnTitle
+import com.example.englishlearnapp.ui.main.learn.LearnByTopics.LearnByTopicsActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -34,7 +37,14 @@ class LearnActivity : AppCompatActivity(){
 
 
         model.listTitle.observe(this, Observer { listTitle ->
-            mRecyclerView.adapter = LearnAdapter(listTitle)
+            mRecyclerView.adapter = LearnAdapter(listTitle, object : OnLearnRecyclerClick{
+                override fun onClick(pos: Int) {
+                    for(pos in 1..5){
+                        1
+                    }
+                }
+
+            })
         })
     }
 //    override fun onLearnClick(item: LearnTitle, position: Int) {

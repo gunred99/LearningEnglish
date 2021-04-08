@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.dictionary_activity.*
 class DictionaryActivity : AppCompatActivity() {
 
     private lateinit var mTxtSearch: EditText
+    private lateinit var mTxtSearchView: TextView
     private lateinit var mBtnSearch: Button
     private lateinit var mTxtResults: TextView
     private lateinit var mTxtResultsDescription: TextView
@@ -32,13 +33,13 @@ class DictionaryActivity : AppCompatActivity() {
         mTxtSearch = findViewById(R.id.txtSearch)
         mBtnSearch = findViewById(R.id.btnSearch)
         mTxtResults = findViewById(R.id.txtResults)
+        mTxtSearchView = findViewById(R.id.txtSearchView)
         mTxtResultsDescription = findViewById(R.id.txtResultsDescription)
 
         var database = FirebaseDatabase.getInstance()
         var ref = database.getReference("Dictionary")
 
         mBtnSearch.setOnClickListener() {
-
 //            database.child("Dictionary").child("Vocabulary").child(txtVoNo.toString()).setValue(Vocabulary(txtVoNo, txtVoSearch, txtVoResult))
 
 //            var txtSearch = mTxtSearch.text.toString()
@@ -71,26 +72,34 @@ class DictionaryActivity : AppCompatActivity() {
 //
 //            })
             Translate()
+            mTxtSearch.setText("")
         }
 
     }
 
     private fun Translate() {
-        if(TextUtils.isEmpty(mTxtSearch.text.toString()))
-        {
+        if (TextUtils.isEmpty(mTxtSearch.text.toString())) {
             Toast.makeText(this, "No empty word", Toast.LENGTH_SHORT).show()
-        }
-        else{
-            var database = FirebaseDatabase.getInstance().getReference("Dictionary").child("Vocabulary")
-            database.addValueEventListener(object : ValueEventListener{
-                var searchKeyWord = mTxtSearch.text.toString()
-                var searchKeyWordChar = VNCharacterUtils.removeAccent(searchKeyWord)
+        } else {
+            var searchKeyWord = mTxtSearch.text.toString()
+            var searchKey = searchKeyWord.toLowerCase()
+
+            var database =
+                FirebaseDatabase.getInstance().getReference("Dictionary").child("Vocabulary")
+            database.addValueEventListener(object : ValueEventListener {
+
+                var searchKeyWordChar = mTxtSearch.text.toString()
+
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    if (snapshot.child(mTxtSearch.text.toString()).exists()){
-                        txtResults.setText(snapshot.child(searchKeyWordChar).getValue().toString())
-                    }
-                    else{
-                        Toast.makeText(this@DictionaryActivity, "No search result word", Toast.LENGTH_SHORT).show()
+                    if (snapshot.child(searchKeyWord).exists()) {
+                        txtSearchView.setText(searchKeyWordChar).toString()
+                        txtResults.setText(snapshot.child(searchKeyWord).getValue().toString())
+                    } else {
+                        Toast.makeText(
+                            this@DictionaryActivity,
+                            "No search result word",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
 
